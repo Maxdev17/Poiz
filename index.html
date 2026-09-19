@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Poiz Imaging Photo Studio — Abuja's premier photography studio. Weddings, events, maternity, baby shoots and indoor sessions in Asokoro, Abuja." />
+  <title>Poiz Imaging Photo Studio | Abuja</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">Poiz Imaging</span>
+        <span class="nav-logo-tag">Photo Studio · Asokoro, Abuja</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-phone">0913 484 7773</span>
+        <a href="https://wa.me/2349134847773" target="_blank" class="btn btn-gold">Book a Session</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="closeMobileNav()">Home</a>
+    <a href="gallery.html" onclick="closeMobileNav()">Gallery</a>
+    <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+    <a href="https://wa.me/2349134847773" target="_blank" class="btn btn-gold" style="margin-top:16px;">Book a Session</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1600&q=80"
+        alt="Poiz Imaging Studio hero"
+        id="heroBgImg"
+      />
+      <div class="hero-bg-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <span>Asokoro, Abuja · Est. 2018</span>
+        </div>
+
+        <h1 id="heroTitle">
+          We Don't Just<br />
+          Take Photos.<br />
+          We <em>Tell Stories.</em>
+        </h1>
+
+        <p class="hero-desc">
+          Poiz Imaging is Abuja's most-reviewed photography studio — 215 verified five-star experiences. Weddings, events, maternity, baby shoots and more.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/2349134847773" target="_blank" class="btn btn-gold">
+            📅 Book a Session
+          </a>
+          <a href="gallery.html" class="btn btn-outline">
+            View Our Work
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-stat-card reveal-scale">
+          <div class="hero-stat-number">215</div>
+          <div class="hero-stat-label">5-Star Reviews</div>
+        </div>
+        <div class="hero-stat-card reveal-scale">
+          <div class="hero-stat-number">4.8★</div>
+          <div class="hero-stat-label">Google Rating</div>
+        </div>
+        <div class="hero-stat-card reveal-scale">
+          <div class="hero-stat-number">7am</div>
+          <div class="hero-stat-label">Open Daily</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>Weddings</span><span class="dot">✦</span>
+      <span>Maternity Shoots</span><span class="dot">✦</span>
+      <span>Baby Photography</span><span class="dot">✦</span>
+      <span>Events Coverage</span><span class="dot">✦</span>
+      <span>Indoor Studio Shoots</span><span class="dot">✦</span>
+      <span>Corporate Photography</span><span class="dot">✦</span>
+      <span>Weddings</span><span class="dot">✦</span>
+      <span>Maternity Shoots</span><span class="dot">✦</span>
+      <span>Baby Photography</span><span class="dot">✦</span>
+      <span>Events Coverage</span><span class="dot">✦</span>
+      <span>Indoor Studio Shoots</span><span class="dot">✦</span>
+      <span>Corporate Photography</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">What We Do</span>
+        <h2>Every Moment,<br />Perfectly Captured</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-number">01</div>
+          <div class="service-img" style="height:200px;overflow:hidden;border-radius:4px;margin-bottom:24px;">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+              alt="Wedding photography"
+              style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" />
+          </div>
+          <h3>Wedding Photography</h3>
+          <p>Your wedding day deserves more than snapshots. We craft cinematic wedding stories — every tear, every laugh, every look.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-number">02</div>
+          <div class="service-img" style="height:200px;overflow:hidden;border-radius:4px;margin-bottom:24px;">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
+              alt="Events coverage"
+              style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" />
+          </div>
+          <h3>Events Coverage</h3>
+          <p>Corporate events, parties, celebrations — we document every significant moment with the precision your event deserves.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-number">03</div>
+          <div class="service-img" style="height:200px;overflow:hidden;border-radius:4px;margin-bottom:24px;">
+            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80"
+              alt="Indoor studio shoot"
+              style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" />
+          </div>
+          <h3>Indoor Studio Shoots</h3>
+          <p>Our fully equipped Asokoro studio is designed for stunning portraits — professional lighting, premium backdrops, zero compromise.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-number">04</div>
+          <div class="service-img" style="height:200px;overflow:hidden;border-radius:4px;margin-bottom:24px;">
+            <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&q=80"
+              alt="Maternity shoot"
+              style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" />
+          </div>
+          <h3>Maternity Shoots</h3>
+          <p>Celebrate the beauty of pregnancy. Elegant, artistic, and deeply personal maternity sessions in studio or on location.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-number">05</div>
+          <div class="service-img" style="height:200px;overflow:hidden;border-radius:4px;margin-bottom:24px;">
+            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&q=80"
+              alt="Baby photography"
+              style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" />
+          </div>
+          <h3>Baby Photography</h3>
+          <p>Newborns, milestones, first birthdays — we capture the innocence of childhood in timeless images you'll treasure forever.</p>
+        </div>
+
+        <div class="service-card reveal" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:340px;background:var(--gold-dim);border:1px dashed var(--border-gold);">
+          <div style="font-size:2.5rem;margin-bottom:20px;">📸</div>
+          <h3 style="color:var(--gold);">Ready to Book?</h3>
+          <p style="text-align:center;max-width:28ch;color:var(--text-muted);margin-top:10px;">Available 7 days a week, 7am – 9pm. WhatsApp us to schedule your session.</p>
+          <a href="https://wa.me/2349134847773" target="_blank" class="btn btn-gold" style="margin-top:28px;">
+            Book Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / WHY POIZ ===== -->
+  <section class="section" style="background:var(--black-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-img-wrap reveal-left">
+          <img
+            class="about-img-main"
+            src="https://images.unsplash.com/photo-1559628233-100c798642d8?w=800&q=80"
+            alt="Poiz Imaging Studio team at work"
+          />
+          <img
+            class="about-img-accent"
+            src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&q=80"
+            alt="Photography equipment"
+          />
+          <div class="about-badge">
+            <div class="about-badge-number">215</div>
+            <div class="about-badge-text">5★ Reviews</div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <span class="section-label">Why Choose Poiz</span>
+          <h2>Abuja's Most Trusted Photography Studio</h2>
+          <div class="gold-line"></div>
+          <p>
+            Located in the heart of Asokoro, we've spent years building a reputation for one thing — delivering images that move people. With over 215 five-star Google reviews, our work speaks for itself.
+          </p>
+
+          <div class="about-points">
+            <div class="about-point">
+              <div class="about-point-icon">🏆</div>
+              <div>
+                <h4>Abuja's Highest-Rated Studio</h4>
+                <p>4.8 stars across 215 verified Google reviews — consistently rated above every competitor in Asokoro and the wider Abuja area.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="about-point-icon">⚡</div>
+              <div>
+                <h4>State-of-the-Art Equipment</h4>
+                <p>Professional-grade cameras, premium lighting rigs, and curated backdrops — your photos look expensive because we invest in the tools that make them that way.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="about-point-icon">🤍</div>
+              <div>
+                <h4>Women-Owned, Client-First</h4>
+                <p>We understand what it means to feel seen. Our team creates a warm, comfortable environment where you can be fully yourself in front of the camera.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="about-point-icon">📅</div>
+              <div>
+                <h4>Open Every Day, 7am – 9pm</h4>
+                <p>We work around your schedule — not the other way around. Seven days a week, morning through evening.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY PREVIEW ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal text-center">
+        <span class="section-label">Our Work</span>
+        <h2>A Glimpse of What We Create</h2>
+        <div class="gold-line center"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:56px;">
+        <div class="gallery-item reveal-scale" style="height:280px;">
+          <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=80" alt="Gallery preview" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Weddings</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" style="height:280px;">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Gallery preview" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Maternity</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" style="height:280px;">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80" alt="Gallery preview" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Studio</span></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:44px;">
+        <a href="gallery.html" class="btn btn-outline">View Full Gallery →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section" style="background:var(--black-mid);border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="reveal text-center">
+        <span class="section-label">Client Love</span>
+        <h2>What Our Clients Say</h2>
+        <div class="gold-line center"></div>
+        <p style="text-align:center;margin:0 auto;">Real words from real clients — verified on Google.</p>
+      </div>
+
+      <div class="testimonials-wrap">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"I enjoyed the session I had today. The staff were super awesome and the photographer is definitely a Gen Z — he is current with the trends. I am a satisfied customer."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JN</div>
+            <div>
+              <div class="testimonial-name">Joy Negedu</div>
+              <div class="testimonial-date">1 month ago · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"This is my 3rd visit. I've been to different studios in Abuja but I can categorically say Poiz is one of the ultimate best. Their customer service is top notch."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MA</div>
+            <div>
+              <div class="testimonial-name">Mary Abah</div>
+              <div class="testimonial-date">3 months ago · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"My family and I had a great experience at Poiz Imaging. The staff went above and beyond to make sure we had a comfortable experience and got all the photos we had in mind."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CG</div>
+            <div>
+              <div class="testimonial-name">Chisomo Gomonda</div>
+              <div class="testimonial-date">1 month ago · Google Review</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Let's Create Together</span>
+        <h2>Your Story Deserves<br />to Be Told Beautifully</h2>
+        <p>Book your session today. We're open 7 days a week, 7am – 9pm at H-Medix Mall, Asokoro, Abuja.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/2349134847773" target="_blank" class="btn btn-gold">
+            💬 WhatsApp Us Now
+          </a>
+          <a href="tel:+2349134847773" class="btn btn-outline">
+            📞 Call 0913 484 7773
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="nav-logo-name">Poiz Imaging</span>
+            <span class="nav-logo-tag">Photo Studio · Asokoro, Abuja</span>
+          </div>
+          <p>Abuja's most-trusted photography studio. We capture the moments that matter most — with artistry, precision, and heart.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><a href="tel:+2349134847773">0913 484 7773</a></li>
+            <li><a href="https://wa.me/2349134847773" target="_blank">WhatsApp</a></li>
+            <li><a href="contact.html">Suite F04, H-Medix Mall<br>Yakubu Gowon Crescent<br>Asokoro, Abuja</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Poiz Imaging Photo Studio. All rights reserved.</p>
+        <div class="footer-credit-block">
+          <p class="footer-credit">Built by <a href="https://wa.me/2347089428435" target="_blank">Maxwell — VagabondCode</a></p>
+          <div class="footer-credit-contacts">
+            <a href="https://wa.me/2347089428435" target="_blank" class="footer-contact-link">💬 WhatsApp</a>
+            <a href="mailto:vagabondcode02@gmail.com" class="footer-contact-link">Email</a>
+            <a href="https://instagram.com/vagabond.code" target="_blank" class="footer-contact-link">📸 Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2349134847773" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- LENIS -->
+  <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+  <!-- Main JS -->
+  <script src="main.js"></script>
+</body>
+</html>
