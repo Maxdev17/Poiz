@@ -1,4 +1,8 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+
+[build]
+  publish = "."
