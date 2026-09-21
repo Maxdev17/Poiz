@@ -156,7 +156,116 @@ if (heroBgImg) {
   gsap.to(heroBgImg, { scale: 1.08, duration: 12, ease: "none" });
 }
 
+// --- SCROLL REVEAL ---
+// GSAP sets initial state then animates — no CSS opacity:0 needed
 
+gsap.utils.toArray('.reveal').forEach((el, i) => {
+  gsap.set(el, { opacity: 0, y: 50 });
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 88%',
+    once: true,
+    onEnter: () => {
+      gsap.to(el, {
+        opacity: 1, y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: Math.min(i * 0.04, 0.3)
+      });
+    }
+  });
+});
+
+gsap.utils.toArray('.reveal-left').forEach(el => {
+  gsap.set(el, { opacity: 0, x: -60 });
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 85%',
+    once: true,
+    onEnter: () => {
+      gsap.to(el, { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out' });
+    }
+  });
+});
+
+gsap.utils.toArray('.reveal-right').forEach(el => {
+  gsap.set(el, { opacity: 0, x: 60 });
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 85%',
+    once: true,
+    onEnter: () => {
+      gsap.to(el, { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out' });
+    }
+  });
+});
+
+gsap.utils.toArray('.reveal-scale').forEach((el, i) => {
+  gsap.set(el, { opacity: 0, scale: 0.88 });
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 88%',
+    once: true,
+    onEnter: () => {
+      gsap.to(el, {
+        opacity: 1, scale: 1,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: i * 0.1
+      });
+    }
+  });
+});
+
+// --- SERVICE CARDS STAGGER ---
+const serviceCards = gsap.utils.toArray('.service-card');
+if (serviceCards.length) {
+  gsap.set(serviceCards, { opacity: 0, y: 60 });
+  ScrollTrigger.create({
+    trigger: '.services-grid',
+    start: 'top 80%',
+    once: true,
+    onEnter: () => {
+      gsap.to(serviceCards, {
+        opacity: 1, y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        stagger: 0.12
+      });
+    }
+  });
+}
+
+// --- SERVICE CARD IMAGE HOVER ---
+document.querySelectorAll('.service-card').forEach(card => {
+  const img = card.querySelector('img');
+  if (!img) return;
+  card.addEventListener('mouseenter', () => {
+    gsap.to(img, { scale: 1.07, duration: 0.6, ease: 'power2.out' });
+  });
+  card.addEventListener('mouseleave', () => {
+    gsap.to(img, { scale: 1, duration: 0.6, ease: 'power2.out' });
+  });
+});
+
+// --- TESTIMONIAL CARDS STAGGER ---
+const testimonialCards = gsap.utils.toArray('.testimonial-card');
+if (testimonialCards.length) {
+  gsap.set(testimonialCards, { opacity: 0, y: 50 });
+  ScrollTrigger.create({
+    trigger: '.testimonials-wrap',
+    start: 'top 80%',
+    once: true,
+    onEnter: () => {
+      gsap.to(testimonialCards, {
+        opacity: 1, y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        stagger: 0.15
+      });
+    }
+  });
+}
 
 // --- SERVICE CARDS STAGGER ---
 const serviceCards = gsap.utils.toArray(".service-card");
