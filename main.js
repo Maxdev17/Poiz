@@ -156,68 +156,7 @@ if (heroBgImg) {
   gsap.to(heroBgImg, { scale: 1.08, duration: 12, ease: "none" });
 }
 
-// --- SCROLL REVEAL ---
-gsap.utils.toArray(".reveal").forEach((el, i) => {
-  gsap.from(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 88%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.9,
-    ease: "power3.out",
-    delay: i * 0.04,
-  });
-});
 
-gsap.utils.toArray(".reveal-left").forEach((el) => {
-  gsap.from(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 85%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-    opacity: 0,
-    x: -60,
-    duration: 1.1,
-    ease: "power3.out",
-  });
-});
-
-gsap.utils.toArray(".reveal-right").forEach((el) => {
-  gsap.from(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 85%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-    opacity: 0,
-    x: 60,
-    duration: 1.1,
-    ease: "power3.out",
-  });
-});
-
-gsap.utils.toArray(".reveal-scale").forEach((el, i) => {
-  gsap.from(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 88%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-    opacity: 0,
-    scale: 0.88,
-    duration: 0.9,
-    ease: "power3.out",
-    delay: i * 0.1,
-  });
-});
 
 // --- SERVICE CARDS STAGGER ---
 const serviceCards = gsap.utils.toArray(".service-card");
