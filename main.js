@@ -267,23 +267,7 @@ if (testimonialCards.length) {
   });
 }
 
-// --- SERVICE CARDS STAGGER ---
-const serviceCards = gsap.utils.toArray(".service-card");
-if (serviceCards.length) {
-  gsap.from(serviceCards, {
-    scrollTrigger: {
-      trigger: ".services-grid",
-      start: "top 80%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-    opacity: 0,
-    y: 60,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.12,
-  });
-}
+
 
 // --- SERVICE CARD IMAGE HOVER ---
 document.querySelectorAll(".service-card").forEach((card) => {
@@ -297,23 +281,7 @@ document.querySelectorAll(".service-card").forEach((card) => {
   });
 });
 
-// --- TESTIMONIAL CARDS STAGGER ---
-const testimonialCards = gsap.utils.toArray(".testimonial-card");
-if (testimonialCards.length) {
-  gsap.from(testimonialCards, {
-    scrollTrigger: {
-      trigger: ".testimonials-wrap",
-      start: "top 80%",
-      toggleActions: "play none none none",
-      once: true,
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.15,
-  });
-}
+
 
 // --- ABOUT PARALLAX ---
 const aboutImg = document.querySelector(".about-img-main");
@@ -497,21 +465,13 @@ if (contactForm) {
 }
 
 // --- FALLBACK VISIBILITY ---
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
+  ScrollTrigger.refresh();
   setTimeout(() => {
-    document
-      .querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale")
-      .forEach((el) => {
-        if (getComputedStyle(el).opacity === "0") {
-          gsap.to(el, {
-            opacity: 1,
-            y: 0,
-            x: 0,
-            scale: 1,
-            duration: 0.6,
-            ease: "power2.out",
-          });
-        }
-      });
-  }, 2000);
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .service-card, .testimonial-card').forEach(el => {
+      if (parseFloat(getComputedStyle(el).opacity) < 0.1) {
+        gsap.to(el, { opacity: 1, y: 0, x: 0, scale: 1, duration: 0.5 });
+      }
+    });
+  }, 2500);
 });
